@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>Hello, World!</title>
+</head>
+<body>
+  <h1>
+    Hello, World!
+  </h1>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Good Luck Baby</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    font-family: Georgia, serif;
+    background: linear-gradient(
+        135deg,
+        #160b35,
+        #49145f,
+        #a52a75,
+        #241044
+    );
+    background-size: 400% 400%;
+    animation: bg 12s ease infinite;
+    color: white;
+}
+
+@keyframes bg {
+    0%,100% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+}
+
+.stars {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+        radial-gradient(2px 2px at 20% 30%, white, transparent),
+        radial-gradient(2px 2px at 70% 20%, #ffd6f5, transparent),
+        radial-gradient(2px 2px at 80% 70%, white, transparent),
+        radial-gradient(2px 2px at 35% 80%, #ffb8e8, transparent),
+        radial-gradient(3px 3px at 55% 45%, white, transparent);
+    background-size: 180px 180px;
+    animation: twinkle 4s ease-in-out infinite alternate;
+}
+
+@keyframes twinkle {
+    from {opacity: .25;}
+    to {opacity: 1;}
+}
+
+.heart {
+    position: fixed;
+    bottom: -40px;
+    color: #ffb5e5;
+    font-size: 20px;
+    opacity: 0;
+    animation: floatUp linear infinite;
+    text-shadow: 0 0 12px #ff65cf;
+    pointer-events: none;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) rotate(0deg) scale(.5);
+        opacity: 0;
+    }
+    15% {opacity: .8;}
+    85% {opacity: .7;}
+    100% {
+        transform: translateY(-115vh) rotate(360deg) scale(1.5);
+        opacity: 0;
+    }
+}
+
+.card {
+    width: min(88%, 390px);
+    position: relative;
+    padding: 35px 25px;
+    text-align: center;
+    border-radius: 28px;
+    background: rgba(255,255,255,.09);
+    border: 1px solid rgba(255,210,246,.55);
+    box-shadow:
+        0 0 20px rgba(255,100,220,.3),
+        0 0 55px rgba(196,74,255,.25),
+        inset 0 0 25px rgba(255,255,255,.06);
+    backdrop-filter: blur(15px);
+    animation: appear 1.5s ease both, glow 4s ease-in-out infinite;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(35px) scale(.9);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes glow {
+    0%,100% {
+        box-shadow: 0 0 20px #d64ec955, 0 0 45px #a43bff33;
+    }
+    50% {
+        box-shadow: 0 0 35px #ff80d6aa, 0 0 75px #a43bff77;
+    }
+}
+
+.flower {
+    font-size: 48px;
+    margin-bottom: 12px;
+    filter: drop-shadow(0 0 12px #ff9be7);
+    animation: sway 3s ease-in-out infinite;
+}
+
+@keyframes sway {
+    0%,100% {transform: rotate(-8deg) scale(1);}
+    50% {transform: rotate(8deg) scale(1.1);}
+}
+
+h1 {
+    font-size: 27px;
+    margin-bottom: 22px;
+    letter-spacing: 2px;
+    color: #ffe0f6;
+    text-shadow: 0 0 12px #ff72d0, 0 0 25px #d63aff;
+}
+
+.line {
+    width: 75%;
+    height: 2px;
+    margin: 0 auto 22px;
+    background: linear-gradient(90deg, transparent, #ffc5ee, #fff, #ffc5ee, transparent);
+    box-shadow: 0 0 12px #ff9fe4;
+}
+
+.message {
+    font-size: 17px;
+    line-height: 1.9;
+    color: #fff1fb;
+    text-shadow: 0 1px 8px #6d225b;
+}
+
+.message .highlight {
+    color: #ffd1f0;
+    font-weight: bold;
+    text-shadow: 0 0 12px #ff68c9;
+}
+
+.bottom {
+    margin-top: 24px;
+    font-size: 27px;
+    letter-spacing: 5px;
+    color: #ffc6ed;
+    text-shadow: 0 0 15px #ff5ecb;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%,100% {transform: scale(1);}
+    50% {transform: scale(1.12);}
+}
+
+.orbit {
+    position: absolute;
+    inset: -12px;
+    border: 1px solid rgba(255,190,240,.3);
+    border-radius: 35px;
+    animation: rotateBorder 12s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes rotateBorder {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
+.sparkle {
+    position: fixed;
+    color: white;
+    font-size: 15px;
+    pointer-events: none;
+    animation: sparkle 3s ease-in-out infinite;
+}
+
+@keyframes sparkle {
+    0%,100% {opacity: 0; transform: scale(.4) rotate(0deg);}
+    50% {opacity: 1; transform: scale(1.5) rotate(180deg);}
+}
+
+@media (max-width: 360px) {
+    .card {padding: 28px 18px;}
+    .message {font-size: 15px;}
+    h1 {font-size: 23px;}
+}
+</style>
+</head>
+
+<body>
+
+<div class="stars"></div>
+
+<div class="card">
+    <div class="orbit"></div>
+
+    <div class="flower">💐</div>
+
+    <h1>GOOD LUCK</h1>
+
+    <div class="line"></div>
+
+    <div class="message">
+        haaiii baby, good luck and God bless on your summative.
+        remember, <span class="highlight">doing your best is enough</span>
+        na po ha, kahit ano pa makuha mong score, baby,
+        andito po ako sayo, <span class="highlight">proud na proud.</span>
+        wala sa score mo kung gaano ka kahusay.
+        <span class="highlight">i love you lab lab koo, mwuaaa</span>
+    </div>
+
+    <div class="bottom">♡ ♡ ♡</div>
+</div>
+
+<script>
+const symbols = ["♡", "♥", "✦", "✧", "⋆"];
+
+for (let i = 0; i < 32; i++) {
+    const heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerHTML = symbols[Math.floor(Math.random() * symbols.length)];
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = (6 + Math.random() * 9) + "s";
+    heart.style.animationDelay = (Math.random() * 10) + "s";
+    heart.style.fontSize = (12 + Math.random() * 23) + "px";
+    document.body.appendChild(heart);
+}
+
+for (let i = 0; i < 18; i++) {
+    const sparkle = document.createElement("div");
+    sparkle.className = "sparkle";
+    sparkle.innerHTML = "✧";
+    sparkle.style.left = Math.random() * 100 + "vw";
+    sparkle.style.top = Math.random() * 100 + "vh";
+    sparkle.style.animationDelay = Math.random() * 4 + "s";
+    sparkle.style.animationDuration = (2 + Math.random() * 3) + "s";
+    document.body.appendChild(sparkle);
+}
+</script>
+
+</body>
+</html>
